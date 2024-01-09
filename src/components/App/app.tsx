@@ -10,9 +10,9 @@ import NotFoundScreen from '../../pages/NotFound/notFoundScreen.tsx';
 import PrivateRoute from '../PrivateRoute/privateRoute.tsx';
 import {useAppSelector} from '../../hooks';
 import Spinner from '../Spinner/spinner.tsx';
-import {AppRoute} from './const.ts';
 import HistoryRouter from '../HistoryRoute/historyRoute.tsx';
 import browserHistory from '../../browserHistory.ts';
+import {AppRoute} from '../../const.ts';
 
 function App() {
   const films = useAppSelector((state)=> state.filteredFilms);
@@ -38,7 +38,7 @@ function App() {
           />
           <Route
             path={AppRoute.Film}
-            element={<FilmPage films={films}/>}
+            element={<FilmPage />}
           />
           <Route
             path={AppRoute.SignIn}
@@ -46,7 +46,7 @@ function App() {
           />
           <Route
             path={AppRoute.AddReview}
-            element={<AddReview films={films}/>}
+            element={<AddReview />}
           />
           <Route
             path={AppRoute.Player}

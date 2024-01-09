@@ -1,5 +1,4 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {Genres} from '../mocks/genresInfo.ts';
 import {
   changeGenre, loadFilm,
   loadFilms, loadReviews, loadSimilarFilms,
@@ -9,8 +8,7 @@ import {
   setError
 } from './actions.ts';
 import {FilmCardProps} from '../components/FilmCard/filmCardProps.tsx';
-import {AuthorizationStatus} from '../components/App/const.ts';
-import {Review, UserData} from '../const.ts';
+import {AuthorizationStatus, Genres, Review, UserData} from '../const.ts';
 
 type InitialState = {
   genre: Genres;
@@ -32,7 +30,7 @@ export const initialState: InitialState = {
   filteredFilms: [],
   cardsCount: 8,
   dataIsLoading: false,
-  authorizationStatus: AuthorizationStatus.Unknown,
+  authorizationStatus: AuthorizationStatus.NoAuth,
   error: null,
   userData: null,
   film: null,

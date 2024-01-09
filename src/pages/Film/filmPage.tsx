@@ -3,7 +3,6 @@ import {Link, useParams} from 'react-router-dom';
 import NotFoundScreen from '../NotFound/notFoundScreen.tsx';
 import {Fragment, useEffect} from 'react';
 import {Helmet} from 'react-helmet-async';
-import {AuthorizationStatus, MAXDISPLAYEDFILMS} from '../../components/App/const.ts';
 import FilmTabs from '../../components/Tabs/tabs.tsx';
 import FilmList from '../../components/FilmList/filmList.tsx';
 import Logo from '../../components/Logo/logo.tsx';
@@ -11,6 +10,7 @@ import {useAppDispatch, useAppSelector} from '../../hooks';
 import {fetchFilmByID, fetchReviewsByID, fetchSimilarByID} from '../../store/api-actions.ts';
 import {setFilmsDataLoadingStatus} from '../../store/actions.ts';
 import User from '../../components/User/user.tsx';
+import {AuthorizationStatus, MAXDISPLAYEDFILMS} from '../../const.ts';
 
 function FilmPage(): JSX.Element {
   const {id} = useParams();

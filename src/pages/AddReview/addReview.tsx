@@ -2,7 +2,7 @@ import {useAppSelector} from '../../hooks';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import User from '../../components/User/user.tsx';
-import AddReviewForm from '../../components/AddReviewForm/addReviewForm.tsx';
+import AddReviewForm from '../../components/AddReviewForm/add-review-form.tsx';
 import NotFoundScreen from '../NotFound/notFoundScreen.tsx';
 import Logo from '../../components/Logo/logo.tsx';
 
@@ -15,7 +15,7 @@ function AddReviewPage(): JSX.Element {
   return (
     <section className="film-card film-card--full">
       <Helmet>
-        <title>Что посмотреть. Оставьте отзыв!</title>
+        <title>Что посмотреть. Оставить отзыв</title>
       </Helmet>
       <div className="film-card__header">
         <div className="film-card__bg">

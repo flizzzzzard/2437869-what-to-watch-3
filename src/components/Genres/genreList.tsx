@@ -1,9 +1,9 @@
-import {Genres} from '../../mocks/genresInfo.ts';
-import {films} from '../../mocks/films.ts';
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {changeGenre} from '../../store/actions.ts';
+import {Genres} from '../../const.ts';
 
 function GenreList() {
+  const films = useAppSelector((state)=> state.films);
   const genres: Genres[] = [Genres.All, ...new Set(films.map((x) => x.genre))];
   const dispatch = useAppDispatch();
   const currentGenre = useAppSelector((state) => state.genre);
@@ -17,7 +17,6 @@ function GenreList() {
             className="catalog__genres-link"
             onClick={() => {
               dispatch(changeGenre(genre));
-
             }}
             style={{background: 'transparent', border: 'none'}}
           >

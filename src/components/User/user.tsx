@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from '../../hooks';
-import {AuthorizationStatus} from '../App/const.ts';
 import {logOut} from '../../store/api-actions.ts';
+import {AuthorizationStatus} from '../../const.ts';
 
 function User(): JSX.Element {
   const userData = useAppSelector((state) => state.userData);

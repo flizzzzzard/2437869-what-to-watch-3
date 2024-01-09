@@ -1,8 +1,6 @@
 import {createAction} from '@reduxjs/toolkit';
-import {Genres} from '../mocks/genresInfo.ts';
 import {FilmCardProps} from '../components/FilmCard/filmCardProps.tsx';
-import {AppRoute, AuthorizationStatus} from '../components/App/const.ts';
-import {Review, UserData} from '../const.ts';
+import {AppRoute, AuthorizationStatus, Genres, Review, UserData} from '../const.ts';
 
 
 export const changeGenre = createAction('main/changeGenre',

@@ -1,12 +1,12 @@
 import {useEffect, useRef, useState} from 'react';
 
 export type PlayerProps = {
-  videoSrc: string;
+  previewVideoLink: string;
   imgSrc: string;
   isHovered: boolean;
 };
 
-export function VideoPlayer({ videoSrc, imgSrc, isHovered }: PlayerProps) {
+export function VideoPlayer({ previewVideoLink, imgSrc, isHovered }: PlayerProps) {
   const playerRef = useRef<HTMLVideoElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -39,7 +39,7 @@ export function VideoPlayer({ videoSrc, imgSrc, isHovered }: PlayerProps) {
       ref={playerRef}
       width="280"
       height="175"
-      src={videoSrc}
+      src={previewVideoLink}
       poster={imgSrc}
       muted
     />

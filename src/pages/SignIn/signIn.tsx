@@ -1,8 +1,7 @@
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {useNavigate} from 'react-router-dom';
-import {AppRoute, AuthorizationStatus} from '../../components/App/const.ts';
 import {FormEvent, useRef} from 'react';
-import {AuthData} from '../../const.ts';
+import {AppRoute, AuthData, AuthorizationStatus} from '../../const.ts';
 import {logIn} from '../../store/api-actions.ts';
 import {Helmet} from 'react-helmet-async';
 import Footer from '../../components/Footer/footer.tsx';
@@ -39,7 +38,7 @@ function SignInPage(): JSX.Element {
   return (
     <div className="user-page">
       <Helmet>
-        <title>Что посмотреть. Авторизуйтесь</title>
+        <title>Что посмотреть. Авторизация</title>
       </Helmet>
       <header className="page-header user-page__head">
         <Logo />

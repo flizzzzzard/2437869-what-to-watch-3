@@ -1,17 +1,20 @@
 import React from 'react';
 import {useAppSelector} from '../../../hooks';
+import NotFoundScreen from '../../../pages/NotFound/notFoundScreen.tsx';
 
 
 function Overview(): JSX.Element {
   const currentFilm = useAppSelector((state) => state.film);
-
+  if (!currentFilm) {
+    return <NotFoundScreen />;
+  }
   return (
     <>
       <div className="film-rating">
-        <div className="film-rating__score">{currentFilm?.rating}</div>
+        <div className="film-rating__score">{currentFilm.rating}</div>
         <p className="film-rating__meta">
           <span className="film-rating__level">Very good</span>
-          <span className="film-rating__count">{`${currentFilm?.scoresCount} ratings`}</span>
+          <span className="film-rating__count">{`${currentFilm.scoresCount} ratings`}</span>
         </p>
       </div>
       <div className="film-card__text">

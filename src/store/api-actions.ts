@@ -9,9 +9,17 @@ import {
   setError,
   setFilmsDataLoadingStatus
 } from './actions.ts';
-import {APIRoute, AuthData, Review, TIMEOUT_SHOW_ERROR, UserData, UserReview} from '../const.ts';
+import {
+  APIRoute,
+  AppRoute,
+  AuthData,
+  AuthorizationStatus,
+  Review,
+  TIMEOUT_SHOW_ERROR,
+  UserData,
+  UserReview
+} from '../const.ts';
 import {FilmCardProps} from '../components/FilmCard/filmCardProps.tsx';
-import {AppRoute, AuthorizationStatus} from '../components/App/const.ts';
 import {dropToken, saveToken} from '../services/token.ts';
 
 

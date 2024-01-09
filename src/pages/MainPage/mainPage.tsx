@@ -1,7 +1,6 @@
 import Logo from '../../components/Logo/logo.tsx';
 import GenreList from '../../components/Genres/genreList.tsx';
 import Footer from '../../components/Footer/footer.tsx';
-import {MAXDISPLAYEDFILMS} from '../../components/App/const.ts';
 import FilmList from '../../components/FilmList/filmList.tsx';
 import {useAppSelector} from '../../hooks';
 import ShowMore from '../../components/ShowMore/showMore.tsx';
@@ -10,6 +9,7 @@ import {store} from '../../store';
 import {fetchFilmsAction} from '../../store/api-actions.ts';
 import {useEffect} from 'react';
 import User from '../../components/User/user.tsx';
+import {MAXDISPLAYEDFILMS} from '../../const.ts';
 
 function Main(): JSX.Element {
   useEffect(() => {

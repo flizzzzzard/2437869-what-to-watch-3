@@ -1,11 +1,11 @@
 import Footer from '../../components/Footer/footer';
 import Logo from '../../components/Logo/logo';
 import FilmCard from '../../components/FilmCard/filmCard.tsx';
-import {MAXDISPLAYEDFILMS} from '../../components/App/const.ts';
 import {FilmCardListProps} from '../../components/FilmList/filmList.tsx';
 import {Link} from 'react-router-dom';
 import {logOut} from '../../store/api-actions.ts';
 import {useAppDispatch} from '../../hooks';
+import {MAXDISPLAYEDFILMS} from '../../const.ts';
 
 
 function MyList({films}: FilmCardListProps) {

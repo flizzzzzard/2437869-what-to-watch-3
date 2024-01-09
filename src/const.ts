@@ -1,5 +1,4 @@
 import {FilmCardProps} from './components/FilmCard/filmCardProps.tsx';
-import {AuthorizationStatus} from './components/App/const.ts';
 
 export enum APIRoute {
   Films = '/films',
@@ -51,13 +50,49 @@ export enum Reducer {
 }
 
 
+export enum AppRoute {
+  Main = '/',
+  SignIn = '/login',
+  MyList = '/mylist',
+  Film = '/films/:id',
+  AddReview = '/films/:id/review',
+  Player = '/player/:id'
+}
+
+export enum AuthorizationStatus {
+  Auth = 'AUTH',
+  NoAuth = 'NO_AUTH',
+  Unknown = 'UNKNOWN',
+}
+
+export const MAXDISPLAYEDFILMS = 9;
+export const STARCOUNT = 10;
+
 export type UserState = {
   authorizationStatus: AuthorizationStatus;
   avatar: string | null;
+  token: string;
+  avatarUrl: string | null;
 }
 
 export type FilmState = {
   film: FilmCardProps | null;
   reviews: Review[];
   similarFilms: FilmCardProps[];
+}
+
+export enum Genres {
+  All = 'All Genres',
+  Comedy = 'Comedy',
+  Crime = 'Crime',
+  Documentary = 'Documentary',
+  Drama = 'Drama',
+  Horror = 'Horror',
+  KidsFamily = 'Kids & Family',
+  Romance = 'Romance',
+  SciFi = 'Sci-Fi',
+  Thriller = 'Thriller',
+  Fantasy = 'Fantasy',
+  Biography = 'Biography',
+  Adventure = 'Adventure'
 }
